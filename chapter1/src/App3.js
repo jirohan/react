@@ -32,7 +32,7 @@ function App3(){
     }
 
     const zero= () => {
-        setCount(count == 0);
+        setCount(count === 0);
     }
 
     return <div className="App">
