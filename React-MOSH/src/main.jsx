@@ -154,25 +154,31 @@
 
 
 //INHERITANCE
-class Person {
-    constructor(name){
-      this.name = name;
-    }
-    walk() {
-      console.log("walk");
-    }
-  }
+// class Person {
+//     constructor(name){
+//       this.name = name;
+//     }
+//     walk() {
+//       console.log("walk");
+//     }
+//   }
   
-class Teacher extends Person{
-  constructor(name, degree) {
-    super(name);
-    this.degree = degree;
-  }
+// class Teacher extends Person{
+//   constructor(name, degree) {
+//     super(name);
+//     this.degree = degree;
+//   }
 
-  teach(){
-    console.log("teach"); 
-  }
-}
+//   teach(){
+//     console.log("teach"); 
+//   }
+// }
+
+//MODULES
+import Teacher, {promote} from "./Teacher";
+
+//Default -> import ... from "";
+//Named -> import { ... } form '';
 
 const teacher = new Teacher('Ram', 'MSc');
-
+teacher.teach();
