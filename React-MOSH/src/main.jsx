@@ -65,12 +65,25 @@
 
 // const activejobs = jobs.filter(job => job.isActive);
 
-const person = {
-  talk() {
-    setTimeout(() => {
-      console.log("this", this);
-    }, 2000);
-  }
-};
+//arrow function and this
+// const person = {
+//   talk() {
+//     setTimeout(() => {
+//       console.log("this", this);
+//     }, 2000);
+//   }
+// };
 
-person.talk();
+// person.talk();
+
+//array map
+// const colors = ['red', 'green', 'blue'];
+// const items = colors.map(color => `<li>${color}</li>`);
+
+// console.log(items);
+
+// const ipo = ['gcl', 'noifra', 'nic', 'bpc'];
+// const share = ipo.map(ipo => `<li>${ipo}</li>`);
+
+// console.log(share);
+
