@@ -123,3 +123,56 @@
 
 // const profile = {...first, ...second, location: 'Nepal'};
 // console.log(profile);
+
+
+//CLASSES
+
+// class Person {
+//   constructor(name){
+//     this.name = name;
+//   }
+//   walk() {
+//     console.log("walk");
+//   }
+// }
+
+// const person = new Person('Shyam Raja');
+// console.log(person);
+
+// class School {
+//   constructor(section){
+//     this.section = section;
+//   }
+//   run(){
+//     console.log("run");
+//   }
+// }
+
+// const school = new School('Rarahil Memorial School');
+// const a = school.run;
+// console.log(a);
+
+
+//INHERITANCE
+class Person {
+    constructor(name){
+      this.name = name;
+    }
+    walk() {
+      console.log("walk");
+    }
+  }
+  
+class Teacher extends Person{
+  constructor(name, degree) {
+    super(name);
+    this.degree = degree;
+  }
+
+  teach(){
+    console.log("teach"); 
+  }
+}
+
+const teacher = new Teacher('Ram', 'MSc');
+
