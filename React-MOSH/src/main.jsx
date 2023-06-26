@@ -65,7 +65,7 @@
 
 // const activejobs = jobs.filter(job => job.isActive);
 
-//arrow function and this
+//ARROW FUNCTION AND THIS
 // const person = {
 //   talk() {
 //     setTimeout(() => {
@@ -76,7 +76,7 @@
 
 // person.talk();
 
-//array map
+//ARRAY MAP
 // const colors = ['red', 'green', 'blue'];
 // const items = colors.map(color => `<li>${color}</li>`);
 
@@ -87,3 +87,39 @@
 
 // console.log(share);
 
+
+//OBJECT DESTRUCTION
+// const address = {
+//   street: '',
+//   city: '',
+//   country: ''
+// };
+
+// const { street, city } = address;
+// const { country: ct } = address;
+
+// const name = {
+//   firstName: 'Ram',
+//   middleName: '',
+//   lastName: ''
+// }; 
+
+// const { firstName: fn } = name;
+
+// console.log(fn);
+
+//SPREAD OPERATOR
+
+// const first = [1, 2, 3];
+// const second = [4, 5, 6];
+
+// // const combined = first.concat(second);
+// const combined = [...first, 'a', ...second, 'b'];
+// console.log(combined)
+
+//example 1
+// const first = {name : 'Ram'};
+// const second = {job: "Youtuber"};
+
+// const profile = {...first, ...second, location: 'Nepal'};
+// console.log(profile);
