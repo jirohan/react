@@ -1,4 +1,4 @@
-//css modules style
+// css modules style
 // import styles from './App.module.css';
 
 // function App2(){
@@ -15,8 +15,8 @@
 // import "./App.module.css";
 
 // function App2(){
-//     const age = 19;
-//     const isGreen = false;
+//     const age = 1;
+//     const isGreen = true;
     
 //     return (
 //     <div className="App2"> 
@@ -54,24 +54,73 @@
 // export default App2;
 
 //Exercise 1
+// import "./App.module.css";
+// import {Planets} from "./Planets";
+// function App2(){
+//     const planets = [
+//         {name: "Mars", isGasPlanet: false},
+//         {name: "Earth", isGasPlanet: false},
+//         {name: "Jupiter", isGasPlanet: true},
+//         {name: "Venus", isGasPlanet: false},
+//         {name: "Neptune", isGasPlanet: true},
+//         {name: "Uranus", isGasPlanet: true},
+//     ];
+
+//     return (
+//     <div className="App2">
+//         {planets.map(
+//             (planet, key) => !planet.isGasPlanet && <h1>{planet.name}</h1>
+//         )}
+//     </div>)
+// }
+
+// export default App2;
+
+//Exercise 2
+// import "./App.module.css";
+
+// function App2(){
+//     const footballers = [
+//         {name: "Ronaldo", isPlayer: true},
+//         {name: "Ram", isPlayer: false},
+//         {name: "Messi", isPlayer: true},
+//         {name: "Haaland", isPlayer: true},
+//         {name: "Hari", isPlayer: false},
+//         {name: "Neymar", isPlayer: true},
+//     ];
+
+//     return (
+//         <div className="App2">
+//             {footballers.map((footballer, key) =>
+//                  footballer.isPlayer && <h1>{footballer.name}</h1>
+//             )}
+//         </div>
+//     )
+// }
+
+// export default App2;
+
 import "./App.module.css";
-import {Planets} from "./Planets"
+import {Cricketer} from './Cricketer';
+
 function App2(){
-    const planets = [
-        {name: "Mars", isGasPlanet: false},
-        {name: "Earth", isGasPlanet: false},
-        {name: "Jupiter", isGasPlanet: true},
-        {name: "Venus", isGasPlanet: false},
-        {name: "Neptune", isGasPlanet: true},
-        {name: "Uranus", isGasPlanet: true},
+    const cricketers = [
+        {name: "Ronaldo", isPlayer: false},
+        {name: "Sandip", isPlayer: true},
+        {name: "Messi", isPlayer: false},
+        {name: "Haaland", isPlayer: false},
+        {name: "Gynandra", isPlayer: true},
+        {name: "Neymar", isPlayer: false},
+        {name: "Rohit", isPlayer: true}
     ];
 
     return (
-    <div className="App2">
-        {planets.map(
-            (planet, key) => !planet.isGasPlanet && <h1>{planet.name}</h1>
-        )}
-    </div>)
+        <div className="App2">
+            {cricketers.map((cricket, key) =>
+                 !cricket.isPlayer && <h1>{cricket.name}</h1>
+            )}
+        </div>
+    )
 }
 
 export default App2;
