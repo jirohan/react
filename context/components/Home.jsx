@@ -15,7 +15,7 @@ const Home = () => {
     <div className='productContainer'>
       {productsArray}
     </div>
-  )
+  ) 
 };
 
 export default Home
