@@ -9,4 +9,4 @@ export const Task = (props) => {
             <button onClick={() => props.completeTask(props.id)}>Complete</button>
         </div>
         );    
-}
+} 
