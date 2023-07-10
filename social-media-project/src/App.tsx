@@ -1,14 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "./App.css";
+import { Main } from './pages/main-page'
+import { Login } from './pages/login';
+import { Navbar } from './components/navbar'
+import { CreatePost } from './pages/createpost/createpost';
 
 const App = () => {
   return (
-    <div>
+    <div className='App'>
       <Router>
-        <Route>
-          <Routes path ="/" element={} />
-        </Route>
+        <Navbar />
+        <Routes>
+          <Route path ="/" element={<Main />} />
+          <Route path ="/login" element={<Login />} />
+          <Route path ="/createpost" element={<CreatePost />} />
+        </Routes>
       </Router>
     </div>
   )
