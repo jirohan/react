@@ -7,11 +7,9 @@ const App = () => {
   
   return (
     <div className='App'>
-      <p>
         <Header />
         <Content />
         <Footer />
-      </p>
     </div>
   )
 }
