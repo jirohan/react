@@ -41,7 +41,7 @@ main{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     overflow-y: auto;
 }
@@ -107,7 +107,7 @@ ul li:before{
     cursor: pointer;
 }
 
-.item svg:focus, ,.item svg:hover{
+.item svg:focus, .item svg:hover{
     color: red;
     outline: none;
 }
