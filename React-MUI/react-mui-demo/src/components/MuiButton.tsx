@@ -1,5 +1,8 @@
-import {Stack, Button, IconButton, ButtonGroup } from '@mui/material'
+import {Stack, Button, IconButton, ButtonGroup, ToggleButton, ToggleButtonGroup } from '@mui/material'
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
+import FormatBoldIcon from '@mui/icons-material/FormatBold'
+import FormatItallicIcon from '@mui/icons-material/FormatItalic'
+import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined'
 
 export const MuiButton = () => {
   return (
@@ -32,6 +35,13 @@ export const MuiButton = () => {
                 <Button >Center</Button>
                 <Button >Right</Button>
             </ButtonGroup>    
+        </Stack>
+        <Stack direction='row'>
+            <ToggleButtonGroup aria-label='text formatting'>
+                <ToggleButton value='bold' aria-label='bold'><FormatBoldIcon /></ToggleButton>
+                <ToggleButton value='itallic' aria-label='itallic'><FormatItallicIcon /></ToggleButton>
+                <ToggleButton value='underlined' aria-label='underlined'><FormatUnderlinedIcon /></ToggleButton>
+            </ToggleButtonGroup>
         </Stack>
     </Stack>
   )
