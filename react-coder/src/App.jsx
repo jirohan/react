@@ -1,20 +1,11 @@
 import React from 'react'
+import Video from './components/Video'
 
 const App = () => {
-  let name = 'react app'
-  console.log('App')
   return (
     <div>
-      {name}
-      <Demo></Demo>
-    </div>
-  )
-}
-
-function Demo(){
-  return(
-    <div>
-      Demo
+      <div>Hello World</div>
+      <Video></Video>
     </div>
   )
 }
