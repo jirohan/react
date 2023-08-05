@@ -1,13 +1,14 @@
 import React from 'react'
 
-const Video = () => {
+const Video = ({title}) => {
+  let bg = 'dark';
   return (
     <div>
         <img
       src="https://i.imgur.com/MK3eW3As.jpg"
       alt="Katherine Johnson"
     />
-    <h2>React Js Components</h2>
+    <h2 className={bg} >{title} Components</h2>
     </div>
   )
 }
