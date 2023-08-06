@@ -8,7 +8,7 @@ const App = () => {
       <div>Hello World</div>
       <Video title="React Js tutorial"></Video>
       <Video title="Node Js tutorial"></Video>
-      <Audio title="Tailwind" name="CSS"></Audio>
+      <Audio title="Tailwind" name="CSS" ide= "vs"></Audio>
     </div>
   )
 }
