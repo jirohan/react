@@ -9,7 +9,7 @@ const Audio = ({title, name}) => {
         alt="Katherine Johnson"
       />
       <h2 className={bg} >{title} Components</h2>
-      <h2 className={bg} >{name} React</h2>
+      <h2 className={bg} >{name} [Bootstrap, Tailwind]</h2>
       </div>
     )
   }
