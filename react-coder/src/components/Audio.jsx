@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Audio = ({title, name, ide}) => {
+const Audio = ({title, name, ide, version}) => {
     let bg = 'dark';
     return (
       <div>
@@ -11,6 +11,7 @@ const Audio = ({title, name, ide}) => {
       <h2 className={bg} >{title} Components</h2>
       <h2 className={bg} >{name} [Bootstrap, Tailwind]</h2>
       <h2 className={bg} >{ide} vs code</h2>
+      <h2 className={bg} >{version} latest</h2>
       </div>
     )
   }
