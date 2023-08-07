@@ -3,7 +3,8 @@ import Video from "./components/Video";
 import Audio from "./components/Audio";
 import Resume from "./components/Resume";
 import Fifa from "./components/Fifa";
-import records from "./components/data";
+import records from "./data/data";
+import songs from "./data/data2";
 
 const App = () => {
 
@@ -30,23 +31,36 @@ const App = () => {
   //   time:"5 months ago",
   // }
   return (
-    <div>
-      <div>Winners</div>
-      {
-        records.map(record=><Fifa 
-          year={record.year}
-          host={record.host}
-          winner={record.winner}
-          runnerup={record.runnerup}
-          goldenboot={record.goldenboot}
-          goldenball={record.goldenball}
-          penaltyShootout={record.penaltyShootout}
-          id={record.id}
-        ></Fifa>)
-      }
+    // <div>
+    //   <div>Winners</div>
+    //   {
+    //     records.map(record=><Fifa 
+    //       year={record.year}
+    //       host={record.host}
+    //       winner={record.winner}
+    //       runnerup={record.runnerup}
+    //       goldenboot={record.goldenboot}
+    //       goldenball={record.goldenball}
+    //       penaltyShootout={record.penaltyShootout}
+    //       id={record.id}
+    //     ></Fifa>)
+    //   }
 
-    </div> 
-    
+    // </div> 
+    <div>
+      <div>Nepali Hits</div>
+      {
+        songs.map(song=><Audio 
+          songName={song.songName}
+          singerName={song.singerName}
+          year={song.year}
+          label={song.label}
+          solo={song.solo}
+          id={song.id}
+        >
+        </Audio>)
+      }
+    </div>
 
 
     // <div>    <Resume

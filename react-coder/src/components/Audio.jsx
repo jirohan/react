@@ -1,18 +1,19 @@
 import React from 'react'
 
-const Audio = ({title, name, ide, version}) => {
-    let bg = 'dark';
+const Audio = ({songName, singerName, year, label, solo, id}) => {
     return (
-      <div>
+      <>
           <img
-        src="https://i.imgur.com/MK3eW3As.jpg"
-        alt="Katherine Johnson"
+        src={`https://picsum.photos/id/${id}/160/90`}
       />
-      <h2 className={bg} >{title} Components</h2>
-      <h2 className={bg} >{name} [Bootstrap, Tailwind]</h2>
-      <h2 className={bg} >{ide} vs code</h2>
-      <h2 className={bg} >{version} latest</h2>
+      <div>
+        <div className='songName'>SongName: {songName}</div>
+        <div className='singerName'>SingerName: {singerName}</div>
+        <div className='year'>Year: {year}</div>
+        <div className='label'>Label: {label}</div>
+        <div className='solo'>Solo: {solo ? '✔️' : '❌'}</div>
       </div>
+      </>
     )
   }
 

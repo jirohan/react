@@ -13,8 +13,6 @@ const Fifa = ({year, host, winner, runnerup, goldenboot, goldenball, penaltyShoo
             <div className='goldenball'>Goldenball: {goldenball}</div>
             <div className='penaltyShootout'>Penalty: {penaltyShootout ? '✔️' :  '❌'}</div>
             
-            
-            <div className=''></div>
         </div>
 
     </>
