@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Resume = ({firstName, lastName, age, education, experience, skills}) => {
+const Resume = ({firstName, lastName, age, education="Bachelors", experience, skills}) => {
   return (
     <>
         <div>Resume</div>
