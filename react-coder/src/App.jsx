@@ -5,6 +5,7 @@ import Resume from "./components/Resume";
 import Fifa from "./components/Fifa";
 import records from "./data/data";
 import songs from "./data/data2";
+import PlayButton from "./components/PlayButton";
 
 const App = () => {
 
@@ -60,6 +61,10 @@ const App = () => {
         >
         </Audio>)
       }
+      <div>
+        <PlayButton  message="play-msg" onPlay={()=>console.log("Play")} onPause={()=>console.log("Pause")}>Play</PlayButton>
+        {/* <PlayButton  message="pause-msg">Pause</PlayButton> */}
+      </div>
     </div>
 
 
