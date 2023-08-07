@@ -3,40 +3,10 @@ import Video from "./components/Video";
 import Audio from "./components/Audio";
 import Resume from "./components/Resume";
 import Fifa from "./components/Fifa";
+import records from "./components/data";
 
 const App = () => {
-  let record2022 = {
-    year: "2022", 
-    host: "Qatar", 
-    winner: "Argentina", 
-    runnerup: "France", 
-    goldenboot:"Mbappe", 
-    goldenball:"Messi"
-  }
-  let record2018 = {
-    year: "2018", 
-    host: "Russia", 
-    winner: "France", 
-    runnerup: "Crotia", 
-    goldenboot:"H.Kane", 
-    goldenball:"Modric"
-  }
-  let record2014 = {
-    year: "2014", 
-    host: "Brazil", 
-    winner: "Germany", 
-    runnerup: "Argentina", 
-    goldenboot:"J.Rodriguez", 
-    goldenball:"Messi"
-  }
-  let record2010 = {
-    year: "2010", 
-    host: "South Africa", 
-    winner: "Spain", 
-    runnerup: "Netherland", 
-    goldenboot:"T.Muller", 
-    goldenball:"D.Forlan"
-  }
+
   // let resum= {
   //   firstName:"Ram", 
   //   lastName:"Lal", 
@@ -61,13 +31,20 @@ const App = () => {
   // }
   return (
     <div>
-      <Fifa {...record2022}></Fifa><br />
+      <div>Winners</div>
+      {
+        records.map(record=><Fifa 
+          year={record.year}
+          host={record.host}
+          winner={record.winner}
+          runnerup={record.runnerup}
+          goldenboot={record.goldenboot}
+          goldenball={record.goldenball}
+          penaltyShootout={record.penaltyShootout}
+          id={record.id}
+        ></Fifa>)
+      }
 
-      <Fifa {...record2018}></Fifa><br />
-
-      <Fifa {...record2014}></Fifa><br />
-
-      <Fifa {...record2010}></Fifa><br />
     </div> 
     
 
@@ -92,6 +69,6 @@ const App = () => {
     //   ></Video>
     // </div>
   );
-};
+}
 
 export default App;
