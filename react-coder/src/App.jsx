@@ -1,16 +1,52 @@
-import React from 'react'
-import Video from './components/Video'
-import Audio from './components/Audio'
+import React from "react";
+import Video from "./components/Video";
+import Audio from "./components/Audio";
+import Resume from "./components/Resume";
 
 const App = () => {
+  let resum= {
+    firstName:"Ram", 
+    lastName:"Lal", 
+    age: "20", 
+    education:"Bachelors", 
+    experience:"2 years", 
+    skills: "Node, React, Js"
+  }
+  let resum2= {
+    firstName:"Shyam", 
+    lastName:"Lal", 
+    age: "24", 
+    education:"Masters", 
+    experience:"4 years", 
+    skills: "Node, React, Js, Python, Ruby, Php"
+  }
+  // let obj = {
+  //   title: "React Js tutorial",
+  //   channel:"Rohan Codes",
+  //   views:"100k",
+  //   time:"5 months ago",
+  // }
   return (
-    <div>
-      <div>Hello World</div>
-      <Video title="React Js tutorial"></Video>
-      <Video title="Node Js tutorial"></Video>
-      <Audio title="Tailwind" name="CSS" ide= "vs" version="19.0"></Audio>
-    </div>
-  )
-}
+    <div>    <Resume
+      {...resum}>
 
-export default App
+      </Resume><br />
+      <Resume 
+       {...resum2}></Resume>
+    </div>
+  
+    // <div>
+    //   <div>Hello World</div>
+    //   <Video
+    //     {...obj}
+    //   ></Video>
+    //   <Video
+    //     title="Node Js tutorial"
+    //     views="100k"
+    //     time="5 months ago"
+    //   ></Video>
+    // </div>
+  );
+};
+
+export default App;
