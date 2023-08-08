@@ -1,28 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Video from "./components/Video";
 import Audio from "./components/Audio";
 import Resume from "./components/Resume";
 import Fifa from "./components/Fifa";
 import records from "./data/data";
-import songs from "./data/data2";
+import songDB from "./data/data2";
 import PlayButton from "./components/PlayButton";
+import Counter from "./components/Counter";
 
 const App = () => {
+  const [songs, setSongs] = useState(songDB);
 
   // let resum= {
-  //   firstName:"Ram", 
-  //   lastName:"Lal", 
-  //   age: "20", 
-  //   education:"Bachelors", 
-  //   experience:"2 years", 
+  //   firstName:"Ram",
+  //   lastName:"Lal",
+  //   age: "20",
+  //   education:"Bachelors",
+  //   experience:"2 years",
   //   skills: "Node, React, Js"
   // }
   // let resum2= {
-  //   firstName:"Shyam", 
-  //   lastName:"Lal", 
-  //   age: "24", 
-  //   education:"Masters", 
-  //   experience:"4 years", 
+  //   firstName:"Shyam",
+  //   lastName:"Lal",
+  //   age: "24",
+  //   education:"Masters",
+  //   experience:"4 years",
   //   skills: "Node, React, Js, Python, Ruby, Php"
   // }
   // let obj = {
@@ -35,7 +37,7 @@ const App = () => {
     // <div>
     //   <div>Winners</div>
     //   {
-    //     records.map(record=><Fifa 
+    //     records.map(record=><Fifa
     //       year={record.year}
     //       host={record.host}
     //       winner={record.winner}
@@ -47,11 +49,26 @@ const App = () => {
     //     ></Fifa>)
     //   }
 
-    // </div> 
+    // </div>
     <div>
-      <div>Nepali Hits</div>
-      {
-        songs.map(song=><Audio 
+      <div>
+        <button
+          onClick={() => {
+            setSongs([...songs, ({
+              id: songs.length+1,
+              songName: "Nepali",
+              singerName: "1974AD",
+              year: "2008",
+              label: "Music Nepal",
+              solo: false,
+            })]);
+          }}
+        >
+          Add Songs
+        </button>
+      </div>
+      {songs.map((song) => (
+        <Audio
           songName={song.songName}
           singerName={song.singerName}
           year={song.year}
@@ -59,23 +76,27 @@ const App = () => {
           solo={song.solo}
           id={song.id}
         >
-        </Audio>)
-      }
-      <div>
-        <PlayButton  message="play-msg" onPlay={()=>console.log("Play")} onPause={()=>console.log("Pause")}>Play</PlayButton>
-        {/* <PlayButton  message="pause-msg">Pause</PlayButton> */}
-      </div>
-    </div>
+          <PlayButton
+            onPlay={() => console.log("Playing...", song.songName)}
+            onPause={() => console.log("Paused...", song.songName)}
+          >
+            {song.songName}
+          </PlayButton>
+        </Audio>
+      ))}
+      <div>{/* <PlayButton  message="pause-msg">Pause</PlayButton> */}</div>
 
+      <Counter />
+    </div>
 
     // <div>    <Resume
     //   {...resum}>
 
     //   </Resume><br />
-    //   <Resume 
+    //   <Resume
     //    {...resum2}></Resume>
     // </div>
-  
+
     // <div>
     //   <div>Hello World</div>
     //   <Video
@@ -88,6 +109,6 @@ const App = () => {
     //   ></Video>
     // </div>
   );
-}
+};
 
 export default App;

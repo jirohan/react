@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Audio = ({songName, singerName, year, label, solo, id}) => {
+const Audio = ({songName, singerName, year, label, solo, id, children}) => {
     return (
       <>
           <img
@@ -12,6 +12,9 @@ const Audio = ({songName, singerName, year, label, solo, id}) => {
         <div className='year'>Year: {year}</div>
         <div className='label'>Label: {label}</div>
         <div className='solo'>Solo: {solo ? '✔️' : '❌'}</div>
+        <div>
+          {children}
+        </div>
       </div>
       </>
     )
